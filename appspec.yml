@@ -1,8 +1,8 @@
 version: 0.0
 os: linux
 files:
-  - source: scripts/server.js
-    destination: /var/www/
+  - source: /
+    destination: /var/www/counter
 hooks:
   AfterInstall:
     - location: scripts/install_dependencies.sh
