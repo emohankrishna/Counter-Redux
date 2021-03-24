@@ -5,9 +5,11 @@ files:
     destination: /home/ec2-user/counter
     overwrite: true
 permissions:
-  - object: /tmp/my-app
-    owner: ec2-user
-    mode: 464
+  - object: /home/ec2-user/counter
+    owner: adm
+    mode: 777
+    type:
+      - directory
 hooks:
   AfterInstall:
     - location: scripts/install_dependencies.sh
