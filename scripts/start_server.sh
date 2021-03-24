@@ -4,4 +4,4 @@
 crontab -l | { cat; echo "@reboot pm2 start /var/www/server.js -i 0 --name \"node-app\""; } | crontab -
 sudo pm2 stop node-app
 # actually start the server
-sudo pm2 start /home/ece-user/counter/scripts/server.js -i 0 --name "node-app"pwd
+sudo pm2 start /home/ec2-user/counter/scripts/server.js -i 0 --name "node-app"pwd
