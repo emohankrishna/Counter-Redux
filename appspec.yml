@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ec2-ser/counter
+    destination: /home/ec2-user/counter
     overwrite: true
 permissions:
   - object: /tmp/my-app
