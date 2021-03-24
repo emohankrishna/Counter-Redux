@@ -1,12 +1,14 @@
-const port = process.env.PORT || 3000
-require('http')
-  .createServer((req, res) => {
-    console.log(`incoming url: ${req.url} and incoming method: ${req.method}`)
-    res.writeHeader(200,{'Content-Type': 'text/html'})
-    res.write('<p>Buenos dias Montevideo</p>')
-    res.write('<p>This is Saturday. Bla blah blah</p>')
-    res.end('<h1>Hello World from amazing Node University course AWS Intermediate</h1>')
-  })
-  .listen(port, (error)=>{
-    console.log(`server is running on ${port}`)
-  })
+const express = require('express');
+const app = express();
+const path = require('path');
+// serve up production assets
+app.use(express.static(path.join(__dirname,"..", "build")));
+// let the react app to handle any unknown routes 
+// serve up the index.html if express does'nt recognize the route
+app.get('*', (req, res) => {
+res.sendFile(path.resolve(__dirname, '..', 'build', 'index.html'));
+});
+// if not in production use the port 5000
+const PORT = process.env.PORT || 3000;
+console.log('server started on port:',PORT);
+app.listen(PORT);
