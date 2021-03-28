@@ -9,7 +9,7 @@ class Counter extends Component {
     render () {
         return (
             <div>
-                <h3> This is Nice Counter Application based on React and React-Redux for AWS Code deploy Demo</h3>
+                <h3> This is Nice Counter Application based on React and React-Redux for AWS Code deploy Demo by Mohan</h3>
                 <CounterOutput value={this.props.ctr} />
                 <CounterControl label="Increment" clicked={this.props.onIncrementCounter} />
                 <CounterControl label="Decrement" clicked={this.props.onDecrementCounter}  />
