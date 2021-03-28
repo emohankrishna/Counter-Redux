@@ -13,7 +13,6 @@ permissions:
 hooks:
   AfterInstall:
     - location: scripts/install_dependencies.sh
-      timeout: 100
       runas: root
   ApplicationStart:
     - location: scripts/start_server.sh
