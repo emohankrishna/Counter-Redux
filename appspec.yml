@@ -12,10 +12,10 @@ permissions:
       - directory
 hooks:
   AfterInstall:
-    - location: /home/ec2-user/counter/scripts/install_dependencies.sh
+    - location: /scripts/install_dependencies.sh
       runas: ec2-user
   ApplicationStart:
-    - location: /home/ec2-user/counter/scripts/start_server.sh
+    - location: /scripts/start_server.sh
       timeout: 100
       runas: ec2-user
 
