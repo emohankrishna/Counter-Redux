@@ -1,6 +1,7 @@
 #!/bin/bash
 # sudo chmod 755 /var/www/server.js # optional
 # this will restart app/server on instance reboot
+source /home/ec2-user/.bash_profile
 crontab -l | { cat; echo "@reboot pm2 start /home/ec2-user/counter/scripts/server.js"; } | crontab -
 npm i -g pm2
 sudo pm2 stop node-app
