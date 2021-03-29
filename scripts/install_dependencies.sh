@@ -12,4 +12,5 @@ sudo yum init -y
 yum install -y nodejs
 yum install -y express
 # install pm2 to restart node app
-npm i -g pm2@2.4.3
+npm install pm2@latest -g
+pm2 update
