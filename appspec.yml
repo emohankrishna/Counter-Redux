@@ -13,10 +13,14 @@ permissions:
 hooks:
   AfterInstall:
     - location: scripts/install_dependencies.sh
-      timeout: 100
+      timeout: 300
       runas: ec2-user
   ApplicationStart:
     - location: scripts/start_server.sh
-      timeout: 100
+      timeout: 300
       runas: ec2-user
+  ValidateService:
+    - location: scripts/validate_server.sh
+      timeout: 300
+      runas: ece2-user
 
