@@ -3,13 +3,13 @@ import { connect } from 'react-redux';
 import * as actionCreators from '../../store/actions/index';
 
 import CounterControl from '../../components/CounterControl/CounterControl';
-/* import CounterOutput from '../../components/CounterOutput/CounterOutput';*/
+import CounterOutput from '../../components/CounterOutput/CounterOutput';
 
 class Counter extends Component {
     render () {
         return (
             <div>
-                <h3> This is Nice Counter Application based on React and React-Redux for AWS Code deploy for DevOps by Swetha, Mohan and Janardhan</h3>
+                <h3> This is Nice Counter Application based on React and React-Redux for AWS Code deploy for DevOps by Shwetha, Mohan and Janardhan</h3>
                 <CounterOutput value={this.props.ctr} />
                 <CounterControl label="Increment" clicked={this.props.onIncrementCounter} />
                 <CounterControl label="Decrement" clicked={this.props.onDecrementCounter}  />
